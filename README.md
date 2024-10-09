@@ -103,6 +103,5 @@ Containerize and Deploy Applications Using Docker
   docker rmi sample-web-app
   ```
 
-### Bonus Task
-- **Deploy to Amazon ECS**: Use Amazon ECS to deploy your Docker container. You can use AWS Fargate, which is a serverless way to run Docker containers without managing the underlying infrastructure.
+
 
