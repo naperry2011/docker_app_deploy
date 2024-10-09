@@ -100,7 +100,7 @@ Containerize and Deploy Applications Using Docker
   ```
 - To remove the Docker image:
   ```bash
-  docker rmi sample-web-app
+  docker rmi docker_app_deploy
   ```
 
 
