@@ -18,7 +18,7 @@ Containerize and Deploy Applications Using Docker
 #### Step 2: Create a Sample Web Application
 1. **Create a Project Directory**: Create a new directory for your sample web application.
    ```bash
-   mkdir sample-web-app && cd sample-web-app
+   mkdir docker_app_deploy && cd docker_app_deploy
    ```
 2. **Write a Simple Web Application**: Create a simple Python web server.
 
@@ -61,9 +61,9 @@ Containerize and Deploy Applications Using Docker
 #### Step 4: Build and Run the Docker Image
 1. **Build the Docker Image**: Run the following command to build your Docker image:
    ```bash
-   docker build -t sample-web-app .
+   docker build -t docker_app_deploy .
    ```
-   This command will create a Docker image named `sample-web-app`.
+   This command will create a Docker image named `docker_app_deploy`.
 
 2. **Run the Docker Container**: Use the following command to run the Docker container:
    ```bash
@@ -74,7 +74,7 @@ Containerize and Deploy Applications Using Docker
 #### Step 5: Push the Docker Image to Amazon ECR
 1. **Create an ECR Repository**: Use the AWS CLI to create an Amazon ECR repository.
    ```bash
-   aws ecr create-repository --repository-name sample-web-app
+   aws ecr create-repository --repository-name docker_app_deploy
    ```
 
 2. **Authenticate Docker to ECR**: Get the authentication token for Docker to access Amazon ECR and authenticate Docker.
@@ -85,12 +85,12 @@ Containerize and Deploy Applications Using Docker
 
 3. **Tag the Docker Image**: Tag your Docker image with the ECR repository URI.
    ```bash
-   docker tag sample-web-app:latest <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/sample-web-app:latest
+   docker tag docker_app_deploy <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/docker_app_deploy:latest
    ```
 
 4. **Push the Image**: Push the image to Amazon ECR.
    ```bash
-   docker push <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/sample-web-app:latest
+   docker push <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/docker_app_deploy:latest
    ```
 
 #### Step 6: Clean Up Docker Resources
